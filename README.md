@@ -10,7 +10,7 @@ The application is fully containerized with Docker and deployed using Docker Com
 
 `node server.js`
 
-The backend exposes REST APIs under http://localhost:8080/api/tutorials.
+The backend exposes REST APIs under http://localhost:8080/api/tutorials
 ### Frontend (Angular 15)
 `cd frontend`
 
@@ -18,4 +18,4 @@ The backend exposes REST APIs under http://localhost:8080/api/tutorials.
 
 `ng serve --port 8081`
 
-Angular will run on `http://localhost:8081/` and uses HttpClient to call the backend. In local (non‑Docker) mode, the base URL is configured in `src/app/services/tutorial.service.ts`.
+Angular will run on http://localhost:8081/ and uses HttpClient to call the backend. In local (non‑Docker) mode, the base URL is configured in `src/app/services/tutorial.service.ts`.
