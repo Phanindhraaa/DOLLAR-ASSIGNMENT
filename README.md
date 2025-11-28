@@ -5,13 +5,17 @@ The application is fully containerized with Docker and deployed using Docker Com
 ## Local development (without Docker)
 ### Backend (Node.js + Express)
 `cd backend`
+
 `npm install`
-# configure Mongo connection if needed:
-# app/config/db.config.js  -> module.exports = `{ url: "mongodb://localhost:27017/dd_db" }`;
+
 `node server.js`
+
 The backend exposes REST APIs under http://localhost:8080/api/tutorials.
 ### Frontend (Angular 15)
 `cd frontend`
+
 `npm install`
+
 `ng serve --port 8081`
+
 Angular will run on `http://localhost:8081/` and uses HttpClient to call the backend. In local (non‑Docker) mode, the base URL is configured in `src/app/services/tutorial.service.ts`.
