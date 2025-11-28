@@ -1,6 +1,47 @@
-In this DevOps task, you need to build and deploy a full-stack CRUD application using the MEAN stack (MongoDB, Express, Angular 15, and Node.js). The backend will be developed with Node.js and Express to provide REST APIs, connecting to a MongoDB database. The frontend will be an Angular application utilizing HTTPClient for communication.  
+This project is a full-stack CRUD application built with the MEAN stack (MongoDB, Express, Angular 15, Node.js). It manages a collection of tutorials with fields: id, title, description, and published. Users can create, retrieve, update, delete, and search tutorials by title.​
 
-The application will manage a collection of tutorials, where each tutorial includes an ID, title, description, and published status. Users will be able to create, retrieve, update, and delete tutorials. Additionally, a search box will allow users to find tutorials by title.
+The application is fully containerized with Docker and deployed using Docker Compose. Nginx is used as a reverse proxy in front of the Angular frontend and Node/Express backend. CI/CD is implemented using GitHub Actions to build and push Docker images to Docker Hub on every push to main.
+
+## Local development (without Docker)
+### Backend (Node.js + Express)
+`cd backend`
+`npm install`
+# configure Mongo connection if needed:
+# app/config/db.config.js  -> module.exports = `{ url: "mongodb://localhost:27017/dd_db" }`;
+`node server.js`
+The backend exposes REST APIs under http://localhost:8080/api/tutorials.
+### Frontend (Angular 15)
+`cd frontend`
+`npm install`
+`ng serve --port 8081`
+Angular will run on `http://localhost:8081/` and uses HttpClient to call the backend. In local (non‑Docker) mode, the base URL is configured in `src/app/services/tutorial.service.ts`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Project setup
 
