@@ -10,7 +10,7 @@ services:
     #   - "27017:27017"
 
   backend:
-    image: phanindhrasura/mean-backend:dev
+    image: phanindhrasura/mean-backend:latest
     container_name: mean-backend
     restart: unless-stopped
     environment:
@@ -22,7 +22,7 @@ services:
     #   - "8080:8080"
 
   frontend:
-    image: phanindhrasura/mean-frontend:dev
+    image: phanindhrasura/mean-frontend:latest
     container_name: mean-frontend
     restart: unless-stopped
     depends_on:
